@@ -26,6 +26,16 @@ It needs no key, no model and no other network: the env is its only
 connection. The engine is the agent's own work, built and tested locally
 against the kit's practice gauntlet.
 
+## Revision
+
+- **Bishop pair**: the evaluation now adds +20 when a side holds two or
+  more bishops (it was dropped in the first build to fit the byte cap).
+  To make room, the Zobrist keys come from a shorter LCG and a few
+  expressions were golfed; `main.py` is 4,091 bytes. Practice trials
+  (6 games each): trial-0 4.0/6, Elo 1,451; trial-1 4.5/6, Elo 1,545
+  (mean 1,498, above the pre-change mean 1,454 and the sunfish
+  baseline ~1,365).
+
 ## License
 
 MIT — see `LICENSE`.
